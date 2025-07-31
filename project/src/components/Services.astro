@@ -1,0 +1,123 @@
+---
+const services = [
+  {
+    title: 'Bespoke Threat Intelligence Assessments',
+    link: '/services/bespoke-threat-intelligence-assessments',
+    description: 'No two organizations share the same risk profile. We take a collaborative approach, designing individual threat intelligence engagements tailored to your industry, infrastructure, and threat landscape.',
+    features: [
+      'Comprehensive threat actor profiling',
+      'Sector-specific attack vector analysis',
+      'MITRE ATT&CK framework mapping',
+      'Executive and technical briefings',
+      'Actionable mitigation strategies'
+    ],
+  },
+  {
+    title: 'TIBER-EU Threat Intelligence Testing',
+    link: '/services/tiber-eu-threat-intelligence-testing',
+    description: 'Bank of England compliant threat intelligence testing for financial institutions. Full regulatory compliance delivered by certified specialists with deep understanding of the regulatory framework.',
+    features: [
+      'Detailed threat actor analysis',
+      'Attack scenario development',
+      'Regulatory documentation',
+      'Stakeholder briefings',
+      'Remediation guidance'
+    ],
+  },
+  {
+    title: 'Managed Threat Intelligence Services',
+    link: '/services/managed-threat-intelligence-services',
+    description: 'Proactive. Targeted. Relevant. Our managed CTI services help you stay ahead of threat actors by delivering real-time intelligence tailored to your industry and risk profile.',
+    features: [
+      'Monthly comprehensive threat reports',
+      'Real-time intelligence alerts',
+      'Quarterly strategic briefings',
+      'Ad-hoc intelligence requests',
+      'Executive threat landscape updates'
+    ],
+  },
+  {
+    title: 'Strategic Intelligence Consulting',
+    link: '/services/strategic-intelligence-consulting',
+    description: 'Expert guidance on threat intelligence program development, incident response, and security strategy from a practitioner who has investigated hundreds of breaches.',
+    features: [
+      'Threat intelligence program design',
+      'Incident response support',
+      'Security strategy consulting',
+      'Threat hunting methodology',
+      'Team training and development'
+    ],
+  }
+];
+---
+
+<section id="services" class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-[#1a365d] mb-4">Services</h2>
+      <p class="text-xl text-[#64748b] max-w-3xl mx-auto">
+        Specialized threat intelligence services designed for organizations that demand excellence
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      {services.map((service, index) => (
+        <div class="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
+          <div class="flex items-center mb-6">
+            <div class="bg-[#1a365d] p-3 rounded mr-4">
+              {index === 0 && (
+                <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              )}
+              {index === 1 && (
+                <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+              )}
+              {index === 2 && (
+                <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                </svg>
+              )}
+              {index === 3 && (
+                <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+                </svg>
+              )}
+            </div>
+            <h3 class="text-xl font-bold text-[#1a365d]">{service.title}</h3>
+          </div>
+          
+          <p class="text-[#64748b] mb-6 leading-relaxed">
+            {service.description}
+          </p>
+          
+          <div class="mb-6">
+            <h4 class="font-semibold text-[#1a365d] mb-3">Each assessment delivers:</h4>
+            <ul class="space-y-2">
+              {service.features.map((feature) => (
+                <li class="flex items-start">
+                  <div class="w-2 h-2 bg-[#64748b] rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span class="text-[#64748b]">{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          
+          <div class="pt-4">
+            <a
+              href={service.link}
+              class="inline-flex items-center text-[#1a365d] font-semibold hover:text-[#2d4a5e] transition-colors"
+            >
+              Learn More
+              <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

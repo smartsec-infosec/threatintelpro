@@ -1,0 +1,99 @@
+---
+const reasons = [
+  {
+    title: 'Specialist Expertise Without Consultancy Overhead',
+    description: 'Get the depth of knowledge that major consultancies provide their tier-one clients, delivered with the responsiveness and focus that only an independent specialist can offer.'
+  },
+  {
+    title: 'Proven Regulatory Experience',
+    description: 'CERST-certified leadership with extensive experience in TIBER-EU, CBEST, and emerging regulatory frameworks. Intelligence that meets audit requirements and satisfies board-level scrutiny.'
+  },
+  {
+    title: 'Battle-Tested Knowledge',
+    description: '15+ years of hands-on breach investigation across financial services, cryptocurrency, and critical infrastructure. We\'ve seen the attacks before they happen because we\'ve cleaned up after them.'
+  },
+  {
+    title: 'Sector-Specific Intelligence',
+    description: 'Deep specialization in financial services, cryptocurrency/DeFi platforms, and critical infrastructure. Understanding your industry\'s unique threat landscape is fundamental to effective intelligence.'
+  }
+];
+
+const sectors = [
+  {
+    title: 'Financial Institutions',
+    description: 'Banks, payment processors, central banks, and financial market infrastructures requiring regulatory-compliant threat intelligence and specialized assessments.'
+  },
+  {
+    title: 'Cryptocurrency & Digital Asset Platforms',
+    description: 'Specialized intelligence on nation-state actors, criminal groups, and attack vectors specifically targeting digital asset organizations and DeFi protocols.'
+  },
+  {
+    title: 'Critical Infrastructure Operators',
+    description: 'Energy, telecommunications, and transport organizations facing advanced persistent threats and state-sponsored attacks requiring specialized analysis.'
+  },
+  {
+    title: 'Government & Regulatory Bodies',
+    description: 'Agencies requiring independent threat intelligence assessments and expert analysis of emerging threat landscapes.'
+  }
+];
+---
+
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Why Choose Us -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-[#1a365d] mb-4">Why Organizations Choose ThreatIntelligencePro</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+      {reasons.map((reason, index) => (
+        <div class="p-8">
+          <div class="flex items-start space-x-4">
+            <div class="bg-gray-100 p-3 rounded flex-shrink-0">
+              {index === 0 && (
+                <svg class="h-6 w-6 text-[#1a365d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              )}
+              {index === 1 && (
+                <svg class="h-6 w-6 text-[#1a365d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                </svg>
+              )}
+              {index === 2 && (
+                <svg class="h-6 w-6 text-[#1a365d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                </svg>
+              )}
+              {index === 3 && (
+                <svg class="h-6 w-6 text-[#1a365d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                </svg>
+              )}
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-[#1a365d] mb-3">{reason.title}</h3>
+              <p class="text-[#64748b] leading-relaxed">{reason.description}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Who We Serve -->
+    <div class="bg-gray-50 rounded-2xl p-12">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-[#1a365d] mb-4">Who We Serve</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {sectors.map((sector) => (
+          <div class="bg-white rounded-lg p-6 border-l-4 border-[#1a365d]">
+            <h3 class="text-xl font-bold text-[#1a365d] mb-3">{sector.title}</h3>
+            <p class="text-[#64748b] leading-relaxed">{sector.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
